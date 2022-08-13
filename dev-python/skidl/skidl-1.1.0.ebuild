@@ -13,12 +13,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+# NOTE that the graphviz dependancy is not documented
 RDEPEND="${PYTHON_DEPS}
     $(python_gen_cond_dep '
         >=dev-python/future-0.15.0[${PYTHON_USEDEP}]
     ')
     $(python_gen_cond_dep '
         >=dev-python/kinparse-0.1.0[${PYTHON_USEDEP}]
+    ')
+    $(python_gen_cond_dep '
+        >=dev-python/graphviz-0.20[${PYTHON_USEDEP}]
     ')
 "
 BDEPEND="${RDEPEND}"
