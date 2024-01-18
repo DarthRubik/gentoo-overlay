@@ -31,6 +31,9 @@ RDEPEND="${PYTHON_DEPS}
     $(python_gen_cond_dep '
         >=dev-python/graphviz-0.20[${PYTHON_USEDEP}]
     ')
+    $(python_gen_cond_dep '
+        =dev-python/sexpdata-1.0.0[${PYTHON_USEDEP}]
+    ')
 "
 BDEPEND="${RDEPEND}"
 
