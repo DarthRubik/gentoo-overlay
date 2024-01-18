@@ -22,6 +22,9 @@ RDEPEND="${PYTHON_DEPS}
     $(python_gen_cond_dep '
         >=dev-python/hierplace-1.0.0[${PYTHON_USEDEP}]
     ')
+    $(python_gen_cond_dep '
+        >=dev-python/pytest-runner-6.0.0[${PYTHON_USEDEP}]
+    ')
 "
 BDEPEND="${RDEPEND}"
 
