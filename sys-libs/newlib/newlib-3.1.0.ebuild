@@ -26,7 +26,7 @@ HOMEPAGE="https://sourceware.org/newlib/"
 
 LICENSE="NEWLIB LIBGLOSS GPL-2"
 SLOT="0"
-IUSE="nls threads unicode headers-only nano long-long-printf register-fini retargetable-locking"
+IUSE="nls threads unicode headers-only nano"
 RESTRICT="strip"
 
 NEWLIBBUILD="${WORKDIR}/build"
@@ -62,9 +62,6 @@ src_configure() {
 		# moved to libgloss for a long time now, so the code in newlib
 		# itself just gets in the way.
 		--disable-newlib-supplied-syscalls
-		$(use_enable long-long-printf newlib-io-long-long)
-		$(use_enable register-fini newlib-register-fini)
-		$(use_enable retargetable-locking newlib-retargetable-locking)
 	)
 	[[ ${CTARGET} == "spu" ]] \
 		&& myconf+=( --disable-newlib-multithread ) \
