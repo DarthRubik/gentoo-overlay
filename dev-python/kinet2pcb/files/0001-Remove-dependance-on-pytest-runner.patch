@@ -1,0 +1,24 @@
+From a47262fb1940afa06bff479a14b1f4586fccb380 Mon Sep 17 00:00:00 2001
+From: Jacob Gamble <gamblejr@prototypeind.com>
+Date: Sat, 8 Mar 2025 09:08:46 -0600
+Subject: [PATCH] Remove dependance on pytest-runner
+
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index d1cf7b3..744de89 100644
+--- a/setup.py
++++ b/setup.py
+@@ -25,7 +25,6 @@ requirements = [
+ ]
+ 
+ setup_requirements = [
+-    "pytest-runner",
+ ]
+ 
+ test_requirements = [
+-- 
+2.45.3
+

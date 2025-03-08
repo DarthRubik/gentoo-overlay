@@ -1,6 +1,9 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{6..11} )
+PATCHES=(
+	"${FILESDIR}"/0001-Remove-dependance-on-pytest-runner.patch
+)
 
 inherit distutils-r1
 
@@ -21,9 +24,6 @@ RDEPEND="${PYTHON_DEPS}
     ')
     $(python_gen_cond_dep '
         >=dev-python/hierplace-1.0.0[${PYTHON_USEDEP}]
-    ')
-    $(python_gen_cond_dep '
-        >=dev-python/pytest-runner-6.0.0[${PYTHON_USEDEP}]
     ')
 "
 BDEPEND="${RDEPEND}"
